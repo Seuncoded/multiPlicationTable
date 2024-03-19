@@ -26,18 +26,13 @@ let secondInput = document.getElementById("secondInput")
 let showScreen = document.getElementById("screen")
 
 function showTable(){
-    showScreen.innerHTML = ""
-    if (firstInput.value > secondInput.value){
-        alert("Invalid!!!")
-    }else{
-        for(let index = firstInput.value; index <= secondInput.value; index++ ){
+
+        for(let index = Number(firstInput.value); index <= Number(secondInput.value); index++ ){
            for (let i = 0; i<= 12; i++){
             showScreen.innerHTML += `<p> ${index} x ${i} = ${index * i} </p>`
            }
         }
     }
-}
-
 
 
 
