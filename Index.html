@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<input type="number" id="firstInput">
+<input type="number" id="secondInput">
+
+<button onclick="showTable()"> Press Me</button>
+
+<h1 id="screen"></h1>
+
+
+</body>
+</html>
+<script src="main.js"></script>
+<script>
+
+let firstInput = document.getElementById("firstInput")
+let secondInput = document.getElementById("secondInput")
+let showScreen = document.getElementById("screen")
+
+function showTable(){
+    showScreen.innerHTML = ""
+    if (firstInput.value > secondInput.value){
+        alert("Invalid!!!")
+    }else{
+        for(let index = firstInput.value; index <= secondInput.value; index++ ){
+           for (let i = 0; i<= 12; i++){
+            showScreen.innerHTML += `<p> ${index} x ${i} = ${index * i} </p>`
+           }
+        }
+    }
+}
+
+
+
+
+
+
+</script>
